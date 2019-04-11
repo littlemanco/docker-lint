@@ -11,6 +11,6 @@ RUN apt-get update && \
     composer global require \
       squizlabs/php_codesniffer
 
-ENTRYPOINT /usr/bin/tini
+ENTRYPOINT ["/usr/bin/tini", "--"]
 
 CMD arc lint
